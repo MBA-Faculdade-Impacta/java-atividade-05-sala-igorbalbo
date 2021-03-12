@@ -1,6 +1,5 @@
 package br.com.impacta.lab;
-
-import br.com.impacta.models.*;
+import br.com.impacta.models.Produto;
 
 public class JavaSpringTemplateApplication {
 
@@ -40,10 +39,11 @@ public class JavaSpringTemplateApplication {
 		produto.codigo = 1;
 		produto.descricao = "Camisa";
 		produto.valor = 70.00;
-		
-		String resumo = produto.montarResumo(produto);
-		
+
+    String resumo = produto.montarResumo();
+
 		System.out.println(resumo);
+
 	}
 
 }

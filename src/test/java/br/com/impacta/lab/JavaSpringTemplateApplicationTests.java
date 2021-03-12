@@ -1,9 +1,9 @@
 package br.com.impacta.lab;
-
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-import br.com.impacta.models.*;
+
+import br.com.impacta.models.Produto;
 
 class JavaSpringTemplateApplicationTests {
 
@@ -14,13 +14,12 @@ class JavaSpringTemplateApplicationTests {
 		produto.codigo = 1;
 		produto.descricao = "Camisa";
 		produto.valor = 70.00;
-		
-		String resumo = produto.montarResumo(produto);
-		
-		assertEquals("codigo: 1, descricao: Camisa, valor: 70.0".toUpperCase(), resumo.toUpperCase());
-		
-	}
 
+String resumo = produto.montarResumo();
+
+		assertEquals("codigo: 1, descricao: Camisa, valor: 70.0".toUpperCase(), resumo.toUpperCase());
+
+	}
 	@Test
 	public void shouldMontarResumoWithNewProdutoCodigo15() {
 		
@@ -28,11 +27,11 @@ class JavaSpringTemplateApplicationTests {
 		produto.codigo = 15;
 		produto.descricao = "Tenis";
 		produto.valor = 200.00;
-		
-		String resumo = produto.montarResumo(produto);
-		
+
+    String resumo = produto.montarResumo();
+
 		assertEquals("codigo: 15, descricao: Tenis, valor: 200.0".toUpperCase(), resumo.toUpperCase());
-		
+
 	}
 	
 }
